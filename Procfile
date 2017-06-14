@@ -1,1 +1,1 @@
-web: token=process.env.BOT_TOKEN node bot/slack_bot.js
+web: node bot/slack_bot.js
