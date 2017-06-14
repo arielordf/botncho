@@ -1,1 +1,1 @@
-web: token=xoxb-197160846997-XZAvVPyvdDYa0aqjI7CfUZKx node bot/slack_bot.js
+web: ENV['BOT_TOKEN'] node bot/slack_bot.js
