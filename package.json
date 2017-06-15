@@ -39,7 +39,8 @@
     "pretest": "jscs ./lib/ ./__test__ --fix",
     "test": "jest --coverage",
     "test-legacy": "mocha ./tests/*.js",
-    "test-watch": "jest --watch"
+    "test-watch": "jest --watch",
+    "start": "node bot/slack_bot.js"
   },
   "repository": {
     "type": "git",
