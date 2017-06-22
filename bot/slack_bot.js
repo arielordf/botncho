@@ -274,7 +274,21 @@ controller.hears(['usage'], 'direct_message,direct_mention,mention', function(bo
             '@'+ bot.identity.name +' seguido de # y el numero de comando. Ejemplo: *@'+ bot.identity.name + '#1* ');
 
     });	
+	
+controller.hears(['jueves'], 'direct_message,direct_mention,mention', function(bot, message) {
 
+        bot.reply(message,
+            'Te voy a dar para que juegues');
+
+    });	
+	
+controller.hears(['gracias'], 'direct_message,direct_mention,mention', function(bot, message) {
+
+        bot.reply(message,
+            'ropikase');
+
+    });	
+	
 controller.hears(['list', 'lista', 'comandos'], 'direct_message,direct_mention,mention', function(bot, message) {
 
         bot.reply(message,
@@ -286,7 +300,8 @@ controller.hears(['list', 'lista', 'comandos'], 'direct_message,direct_mention,m
 			'*#3:* eñemoita pio \n'+
 			'*#4:* eperereta pio \n'+
 			'*#5.1:* emendana hese \n'+
-			'*#5.2:* ekambuna hese \n'
+			'*#5.2:* ekambuna hese \n'+
+			'_bonus_: *jueves*, *gracias* \n'
 			);
 
     });	
