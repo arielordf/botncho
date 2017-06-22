@@ -214,15 +214,15 @@ controller.hears(['shutdown'], 'direct_message,direct_mention,mention', function
 });
 
 
-controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your name'],
+controller.hears(['version', '-v', 'hello'],
     'direct_message,direct_mention,mention', function(bot, message) {
 
         var hostname = os.hostname();
         var uptime = formatUptime(process.uptime());
 
         bot.reply(message,
-            ':robot_face: I am a bot named <@' + bot.identity.name +
-             '>. I have been running for ' + uptime + ' on ' + hostname + '.');
+            ':robot_face: Version 1.0 \n Mi nombre es <@' + bot.identity.name +
+             '>. \n Mi idolo personal es Alfonso Etcheverry.');
 
     });
 
@@ -267,6 +267,29 @@ controller.hears(['#5.2'], 'direct_message,direct_mention,mention', function(bot
             'ekambuna hese');
 
     });
+
+controller.hears(['usage'], 'direct_message,direct_mention,mention', function(bot, message) {
+
+        bot.reply(message,
+            '@'+ bot.identity.name +' seguido de # y el numero de comando. Ejemplo: *@'+ bot.identity.name + '#1* ');
+
+    });	
+
+controller.hears(['list', 'lista', 'comandos'], 'direct_message,direct_mention,mention', function(bot, message) {
+
+        bot.reply(message,
+            '_Comandos Disponibles:_ \n'+
+			'*version:* Descripcion del bot \n'+
+			'*usage:* Como usar el bot \n'+
+			'*#1:* moopio nde vairo \n'+
+			'*#2:* nde rogape \n'+
+			'*#3:* eñemoita pio \n'+
+			'*#4:* eperereta pio \n'+
+			'*#5.1:* emendana hese \n'+
+			'*#5.2:* ekambuna hese \n'
+			);
+
+    });	
 
 
 function formatUptime(uptime) {
